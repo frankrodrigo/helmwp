@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
         - dev/values.yaml
-        - dev/secrets.yaml
+        - dev/secrets.enc.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: wpdb
