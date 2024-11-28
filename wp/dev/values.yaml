@@ -5,7 +5,7 @@ wp:
     env: dev
     stack: wordpress
   image:
-    repository: wsordpress
+    repository: wordpress
     tag: latest
     pullPolicy: Always
   replicas: 3
@@ -13,7 +13,7 @@ wp:
     ## KEY: "value"
     APP_ENV: "dev"
     WORDPRESS_DB_HOST: "wp-database.wpdb.svc.cluster.local"
-    WORDPRESS_DB_NAME: "wordpresss"
+    WORDPRESS_DB_NAME: "wordpress"
     WORDPRESS_DB_USER: "wordpress"
   containerPorts:
       http: 80
