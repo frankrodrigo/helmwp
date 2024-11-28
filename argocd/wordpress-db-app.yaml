@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wordpress-db
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/frankrodrigo/helmwp.git'
+    targetRevision: HEAD
+    path: db
+    helm:
+      valueFiles:
+        - dev/values.yaml
+        - dev/secrets.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: wpdb
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
