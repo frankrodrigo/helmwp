@@ -1,0 +1,4 @@
+creation_rules:
+  - gcp_kms: projects/cbd3354-435500/locations/northamerica-northeast1/keyRings/my-keyring/cryptoKeys/my-key
+    path_regex: '.*\.yaml$'
+    encrypted_regex: '.*'  # This will ensure that all fields in the file are encrypted
