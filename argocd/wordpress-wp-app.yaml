@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/frankrodrigo/helmwp.git'
-    targetRevision: HEAD
+    targetRevision: master
     path: wp
     helm:
       valueFiles:
