@@ -25,6 +25,8 @@ helm uninstall wordpress-app -n wpapp
 ```
 
 ### DB Connection issue
-- the volume is used for db container is hostpath. if db is configured incorrectly, the miss-configured db files will be stored in the volume. Untill the volume is cleared, you will get db issue
-
-- check the env variables
+- cd argocd directory:
+```
+ kubectl apply -f wordpress-db-app.yaml
+ kubectl apply -f wordpress-wp-app.yaml
+```
